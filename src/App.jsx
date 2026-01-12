@@ -95,8 +95,8 @@ const App = () => {
     const testimonials = [
         {
             text: "Serviço impecável! Meu carro ficou parecendo novo, e a conveniência de fazerem tudo em casa é incrível.",
-            name: "Carlos Mendes",
-            car: "BMW 320i"
+            name: "Geison Höehr",
+            car: "Etios XLS"
         },
         {
             text: "A atenção aos detalhes da Glow Delivery é surreal. Nunca vi uma limpeza interna tão bem feita.",
@@ -104,9 +104,9 @@ const App = () => {
             car: "Jeep Compass"
         },
         {
-            text: "Profissionais de confiança e produtos de alta qualidade. Recomendo para quem ama seu carro.",
+            text: "O cuidado com minha moto foi excepcional. Limpeza detalhada que valorizou cada peça da minha Hornet.",
             name: "Roberto Silva",
-            car: "Porsche Macan"
+            car: "Honda Hornet"
         }
     ];
 
