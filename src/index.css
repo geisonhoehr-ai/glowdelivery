@@ -144,7 +144,13 @@ h3 {
 
 .mobile-toggle {
     display: none;
-    color: var(--text-primary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 1002;
 }
 
 /* Mobile Menu */
