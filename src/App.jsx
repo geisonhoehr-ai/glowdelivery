@@ -110,7 +110,7 @@ const App = () => {
         }
     ];
 
-    const whatsappLink = "https://wa.me/5555999122536";
+    const whatsappLink = "https://wa.me/55999700936";
 
     return (
         <div className="layout">
