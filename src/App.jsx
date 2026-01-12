@@ -79,6 +79,18 @@ const App = () => {
             highlight: false
         },
         {
+            name: "Limpeza Interna",
+            price: "25,00",
+            features: ["Aspiração Completa", "Limpeza de Painel", "Limpeza de Vidros", "Sintra Bactericida"],
+            highlight: false
+        },
+        {
+            name: "Higienização Interna",
+            price: "40,00",
+            features: ["Aspiração Profunda", "Renovador Intense", "Eliminação de Odores", "Sintra Bactericida"],
+            highlight: false
+        },
+        {
             name: "Lavagem Completa",
             price: "80,00",
             features: ["Lavagem Externa", "Limpeza Interna", "Aspiração", "Pretinho nos Pneus"],
@@ -91,9 +103,15 @@ const App = () => {
             highlight: false
         },
         {
-            name: "Motos",
+            name: "Moto Simples",
             price: "40,00",
-            features: ["A partir de R$ 40,00 (Simples)", "Detalhada R$ 85,00", "Desengraxante H-7", "Cera Blend"],
+            features: ["Lavagem Técnica", "Desengraxante H-7", "Secagem", "Brilho em Plásticos"],
+            highlight: false
+        },
+        {
+            name: "Moto Detalhada",
+            price: "85,00",
+            features: ["Lavagem Completa", "Desengraxante H-7", "Cera Blend", "Revitalização Total"],
             highlight: false
         }
     ];
