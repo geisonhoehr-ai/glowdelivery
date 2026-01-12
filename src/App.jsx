@@ -39,33 +39,72 @@ const App = () => {
     }, []);
 
     const services = [
-        { title: "Lavagem Externa", desc: "Brilho e proteção para a pintura do seu veículo.", icon: <Car size={28} /> },
-        { title: "Limpeza Interna", desc: "Higienização completa do painel, bancos e carpetes.", icon: <Armchair size={28} /> },
-        { title: "Higienização Interna", desc: "Remoção de ácaros, fungos e odores desagradáveis.", icon: <Droplets size={28} /> },
-        { title: "Lavagem Completa", desc: "O cuidado total que seu carro merece, por dentro e por fora.", icon: <Sparkles size={28} /> },
-        { title: "Lavagem Detalhada", desc: "Atenção máxima aos mínimos detalhes e acabamentos.", icon: <Scan size={28} /> },
-        { title: "Lavagem de Motos", desc: "Cuidados específicos para todos os tipos de motocicletas.", icon: "logo" }
+        {
+            title: "Lavagem Externa",
+            desc: "Limpeza técnica com V-Flock (pH neutro) e acabamento com Cera Blend e Darker nos pneus.",
+            icon: <Car size={28} />
+        },
+        {
+            title: "Limpeza Interna",
+            desc: "Aspiração completa e limpeza bactericida localizada com Sintra.",
+            icon: <Armchair size={28} />
+        },
+        {
+            title: "Higienização Interna",
+            desc: "Cuidado profundo com aspiração e renovador de plásticos Intense.",
+            icon: <Droplets size={28} />
+        },
+        {
+            title: "Lavagem Completa",
+            desc: "O combo ideal: Lavagem Externa técnica + Limpeza Interna detalhada.",
+            icon: <Sparkles size={28} />
+        },
+        {
+            title: "Lavagem Detalhada",
+            desc: "Tratamento VIP: Higienização interna, removedor de chuva ácida (Prizm) e revitalização (Rejuvex).",
+            icon: <Scan size={28} />
+        },
+        {
+            title: "Motos Premium",
+            desc: "Do simples ao detalhado: Cera Blend, H-7 desengraxante e revitalização de componentes.",
+            icon: <Bike size={28} />
+        }
     ];
 
     const pricing = [
         {
-            name: "Essencial",
-            price: "80",
-            features: ["Lavagem Externa", "Limpeza de Rodas", "Secagem Manual", "Pretinho nos Pneus"],
+            name: "Lavagem Externa",
+            price: "60,00",
+            features: ["Pré-lavagem X-trememol", "Shampoo V-Flock", "Cera Blend", "Pneu Darker"],
             highlight: false
         },
         {
-            name: "Premium",
-            price: "150",
-            features: ["Tudo do Essencial", "Limpeza Interna", "Aspiração Completa", "Cera Protetora", "Fragrância Exclusiva"],
+            name: "Lavagem Completa",
+            price: "80,00",
+            features: ["Lavagem Externa", "Limpeza Interna", "Aspiração", "Pretinho nos Pneus"],
             highlight: true
         },
         {
-            name: "Full Detail",
-            price: "280",
-            features: ["Tudo do Premium", "Higienização de Bancos", "Limpeza de Motor", "Descontaminação de Pintura"],
+            name: "Lavagem Detalhada",
+            price: "120,00",
+            features: ["Higienização Interna", "Lavagem Externa", "Removedor Chuva Ácida", "Revitalização Rejuvex"],
+            highlight: false
+        },
+        {
+            name: "Motos",
+            price: "40,00",
+            features: ["A partir de R$ 40,00 (Simples)", "Detalhada R$ 85,00", "Desengraxante H-7", "Cera Blend"],
             highlight: false
         }
+    ];
+
+    const products = [
+        { name: "V-Flock", role: "Shampoo Neutro", desc: "Limpeza segura que não agride a pintura." },
+        { name: "Blend", role: "Cera de Carnaúba", desc: "Brilho intenso e proteção duradoura." },
+        { name: "Sintra", role: "Bactericida", desc: "Elimina micro-organismos do interior." },
+        { name: "Prizm", role: "Vidros", desc: "Remove manchas de chuva ácida." },
+        { name: "Rejuvex", role: "Revitalizador", desc: "Devolve a cor aos plásticos externos." },
+        { name: "Darker", role: "Pneus", desc: "Brilho acetinado para borrachas." }
     ];
 
     // Main cover image is independent, but included in gallery
@@ -362,160 +401,180 @@ const App = () => {
                         ))}
                     </div>
                 </div>
-            </section>
-
-            {/* Moto Detailing Section */}
-            <section className="moto-section-apple">
-                <div className="container">
-                    <div className="section-header-apple">
-                        <h2>Especialização em Motos</h2>
-                        <p>Detalhes que transformam. Antes e Depois.</p>
-                    </div>
-
-                    <div className="moto-grid">
-                        <div className="moto-card">
-                            <span className="moto-label before">Antes</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49.jpeg" alt="Moto Antes" />
-                        </div>
-                        <div className="moto-card">
-                            <span className="moto-label after">Depois</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (1).jpeg" alt="Moto Depois" />
-                        </div>
-
-                        <div className="moto-card">
-                            <span className="moto-label before">Antes</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (2).jpeg" alt="Moto Antes" />
-                        </div>
-                        <div className="moto-card">
-                            <span className="moto-label after">Depois</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (3).jpeg" alt="Moto Depois" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Pricing Section */}
-            <section id="precos" className="pricing-apple">
-                <div className="container">
-                    <div className="section-header-apple">
-                        <h2>Investimento</h2>
-                        <p>Transparência e valor em cada serviço.</p>
-                    </div>
-
-                    <div className="pricing-grid-apple">
-                        {pricing.map((plan, index) => (
-                            <div key={index} className={`pricing-apple-card ${plan.highlight ? 'highlight' : ''}`}>
-                                {plan.highlight && <div className="apple-badge">Recomendado</div>}
-                                <h3>{plan.name}</h3>
-                                <div className="price-apple">
-                                    <span className="currency">R$</span>
-                                    <span className="amount">{plan.price}</span>
-                                </div>
-                                <ul className="price-features-apple">
-                                    {plan.features.map((feature, fIndex) => (
-                                        <li key={fIndex}>
-                                            <CheckCircle2 size={16} className="text-primary" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <a href={whatsappLink} className={`btn-apple-${plan.highlight ? 'primary' : 'secondary'} w-full`}>
-                                    Escolher {plan.name}
-                                </a>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Gallery Cover - Single Image */}
-            <section id="portfolio" className="portfolio-apple">
-                <div className="container">
-                    <div className="section-header-apple">
-                        <h2>Galeria de Projetos</h2>
-                        <p>O que a Glow Delivery entrega todos os dias.</p>
-                    </div>
-
-                    <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        className="portfolio-hero-item"
-                        onClick={openGallery}
-                    >
-                        <img src={coverImage} alt="Cover Car" />
-                        <div className="portfolio-overlay">
-                            <div className="overlay-content">
-                                <Maximize2 size={48} />
-                                <h3>Ver Galeria Completa</h3>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Testimonials */}
-            <section className="testimonials-apple">
-                <div className="container">
-                    <div className="section-header-apple">
-                        <h2>O que dizem</h2>
-                        <p>Histórias de quem já brilha com a Glow.</p>
-                    </div>
-                    <div className="testimonials-grid">
-                        {testimonials.map((t, index) => (
-                            <div key={index} className="testimonial-card">
-                                <Quote size={32} />
-                                <p>"{t.text}"</p>
-                                <div className="testimonial-author">
-                                    <h4>{t.name}</h4>
-                                    <span>{t.car}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Footer */}
-            <footer className="footer-apple">
-                <div className="container">
-                    <div className="footer-top-apple">
-                        <div className="footer-brand-apple">
-                            <span className="logo-text">GLOW <span className="text-primary">DELIVERY</span></span>
-                            <p>A excelência em estética automotiva que vai até você.</p>
-                            <div className="social-apple">
-                                <a href="https://instagram.com/glowdelivery_lavagem"><Instagram size={20} /></a>
-                                <a href={whatsappLink}><Phone size={20} /></a>
-                            </div>
-                        </div>
-                        <div className="footer-links-apple">
-                            <h4>Navegação</h4>
-                            <a href="#inicio">Início</a>
-                            <a href="#servicos">Serviços</a>
-                            <a href="#precos">Preços</a>
-                            <a href="#portfolio">Galeria</a>
-                        </div>
-                        <div className="footer-contact-apple">
-                            <h4>Contato</h4>
-                            <p>Santa Maria, RS</p>
-                            <p>(55) 99912-2536</p>
-                            <p>@glowdelivery_lavagem</p>
-                        </div>
-                    </div>
-                    <div className="footer-bottom-apple">
-                        <p>© 2024 Glow Delivery. Design inspirado em excelência.</p>
-                    </div>
-                </div>
-            </footer>
-
-            {/* Floating WhatsApp Apple Style */}
-            <motion.a
-                href={whatsappLink}
-                className="whatsapp-apple"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-            >
-                <Phone size={24} fill="white" />
-            </motion.a>
         </div>
+            </section >
+
+    {/* Products Showcase */ }
+    < section className = "products-apple" >
+        <div className="container">
+            <div className="section-header-apple">
+                <h2>Produtos de Alta Performance</h2>
+                <p>A química perfeita para o seu veículo.</p>
+            </div>
+            <div className="products-grid">
+                {products.map((prod, idx) => (
+                    <div key={idx} className="product-card">
+                        <h3>{prod.name}</h3>
+                        <span>{prod.role}</span>
+                        <p>{prod.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+            </section >
+
+    {/* Moto Detailing Section */ }
+    < section className = "moto-section-apple" >
+        <div className="container">
+            <div className="section-header-apple">
+                <h2>Especialização em Motos</h2>
+                <p>Detalhes que transformam. Antes e Depois.</p>
+            </div>
+
+            <div className="moto-grid">
+                <div className="moto-card">
+                    <span className="moto-label before">Antes</span>
+                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49.jpeg" alt="Moto Antes" />
+                </div>
+                <div className="moto-card">
+                    <span className="moto-label after">Depois</span>
+                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (1).jpeg" alt="Moto Depois" />
+                </div>
+
+                <div className="moto-card">
+                    <span className="moto-label before">Antes</span>
+                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (2).jpeg" alt="Moto Antes" />
+                </div>
+                <div className="moto-card">
+                    <span className="moto-label after">Depois</span>
+                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (3).jpeg" alt="Moto Depois" />
+                </div>
+            </div>
+        </div>
+            </section >
+
+    {/* Pricing Section */ }
+    < section id = "precos" className = "pricing-apple" >
+        <div className="container">
+            <div className="section-header-apple">
+                <h2>Investimento</h2>
+                <p>Transparência e valor em cada serviço.</p>
+            </div>
+
+            <div className="pricing-grid-apple">
+                {pricing.map((plan, index) => (
+                    <div key={index} className={`pricing-apple-card ${plan.highlight ? 'highlight' : ''}`}>
+                        {plan.highlight && <div className="apple-badge">Recomendado</div>}
+                        <h3>{plan.name}</h3>
+                        <div className="price-apple">
+                            <span className="currency">R$</span>
+                            <span className="amount">{plan.price}</span>
+                        </div>
+                        <ul className="price-features-apple">
+                            {plan.features.map((feature, fIndex) => (
+                                <li key={fIndex}>
+                                    <CheckCircle2 size={16} className="text-primary" />
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                        <a href={whatsappLink} className={`btn-apple-${plan.highlight ? 'primary' : 'secondary'} w-full`}>
+                            Escolher {plan.name}
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+            </section >
+
+    {/* Gallery Cover - Single Image */ }
+    < section id = "portfolio" className = "portfolio-apple" >
+        <div className="container">
+            <div className="section-header-apple">
+                <h2>Galeria de Projetos</h2>
+                <p>O que a Glow Delivery entrega todos os dias.</p>
+            </div>
+
+            <motion.div
+                whileHover={{ scale: 1.01 }}
+                className="portfolio-hero-item"
+                onClick={openGallery}
+            >
+                <img src={coverImage} alt="Cover Car" />
+                <div className="portfolio-overlay">
+                    <div className="overlay-content">
+                        <Maximize2 size={48} />
+                        <h3>Ver Galeria Completa</h3>
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+            </section >
+
+    {/* Testimonials */ }
+    < section className = "testimonials-apple" >
+        <div className="container">
+            <div className="section-header-apple">
+                <h2>O que dizem</h2>
+                <p>Histórias de quem já brilha com a Glow.</p>
+            </div>
+            <div className="testimonials-grid">
+                {testimonials.map((t, index) => (
+                    <div key={index} className="testimonial-card">
+                        <Quote size={32} />
+                        <p>"{t.text}"</p>
+                        <div className="testimonial-author">
+                            <h4>{t.name}</h4>
+                            <span>{t.car}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+            </section >
+
+    {/* Footer */ }
+    < footer className = "footer-apple" >
+        <div className="container">
+            <div className="footer-top-apple">
+                <div className="footer-brand-apple">
+                    <span className="logo-text">GLOW <span className="text-primary">DELIVERY</span></span>
+                    <p>A excelência em estética automotiva que vai até você.</p>
+                    <div className="social-apple">
+                        <a href="https://instagram.com/glowdelivery_lavagem"><Instagram size={20} /></a>
+                        <a href={whatsappLink}><Phone size={20} /></a>
+                    </div>
+                </div>
+                <div className="footer-links-apple">
+                    <h4>Navegação</h4>
+                    <a href="#inicio">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#precos">Preços</a>
+                    <a href="#portfolio">Galeria</a>
+                </div>
+                <div className="footer-contact-apple">
+                    <h4>Contato</h4>
+                    <p>Santa Maria, RS</p>
+                    <p>(55) 99912-2536</p>
+                    <p>@glowdelivery_lavagem</p>
+                </div>
+            </div>
+            <div className="footer-bottom-apple">
+                <p>© 2024 Glow Delivery. Design inspirado em excelência.</p>
+            </div>
+        </div>
+            </footer >
+
+    {/* Floating WhatsApp Apple Style */ }
+    < motion.a
+href = { whatsappLink }
+className = "whatsapp-apple"
+whileHover = {{ scale: 1.1 }}
+whileTap = {{ scale: 0.9 }}
+            >
+    <Phone size={24} fill="white" />
+            </motion.a >
+        </div >
     );
 };
 
