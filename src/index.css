@@ -1149,6 +1149,59 @@ h3 {
     margin: 0 auto;
 }
 
+/* Moto Section */
+.moto-section-apple {
+    padding: 8rem 0;
+    background: #0a0a0a;
+}
+
+.moto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.moto-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.moto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.moto-card:hover img {
+    transform: scale(1.05);
+}
+
+.moto-label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.moto-label.before {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.moto-label.after {
+    background: var(--primary);
+    color: #000;
+}
+
 /* Responsive Apple */
 @media (max-width: 1024px) {
 

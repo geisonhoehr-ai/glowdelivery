@@ -364,6 +364,36 @@ const App = () => {
                 </div>
             </section>
 
+            {/* Moto Detailing Section */}
+            <section className="moto-section-apple">
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>Especialização em Motos</h2>
+                        <p>Detalhes que transformam. Antes e Depois.</p>
+                    </div>
+
+                    <div className="moto-grid">
+                        <div className="moto-card">
+                            <span className="moto-label before">Antes</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49.jpeg" alt="Moto Antes" />
+                        </div>
+                        <div className="moto-card">
+                            <span className="moto-label after">Depois</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (1).jpeg" alt="Moto Depois" />
+                        </div>
+
+                        <div className="moto-card">
+                            <span className="moto-label before">Antes</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (2).jpeg" alt="Moto Antes" />
+                        </div>
+                        <div className="moto-card">
+                            <span className="moto-label after">Depois</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (3).jpeg" alt="Moto Depois" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Pricing Section */}
             <section id="precos" className="pricing-apple">
                 <div className="container">
