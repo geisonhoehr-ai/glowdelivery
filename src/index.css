@@ -1154,6 +1154,17 @@ h3 {
     .grid-2-apple {
         grid-template-columns: 1fr;
         gap: 4rem;
+        text-align: center;
+    }
+
+    .video-text-area {
+        margin: 0 auto;
+        order: 2;
+        /* Video on top for tablet/mobile usually looks better, or text top? Let's keep text top actually, or default order */
+    }
+
+    .video-content-area {
+        order: 1;
     }
 }
 
@@ -1164,29 +1175,109 @@ h3 {
 
     .mobile-toggle {
         display: block;
+        z-index: 1001;
+        /* Ensure above menu */
+        position: relative;
     }
 
+    /* Mobile Menu Full Screen Touch */
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+        z-index: 999;
+        /* Below toggle button */
+    }
+
+    .mobile-menu a {
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    /* Grid Resets */
     .apple-grid,
     .apple-services-grid,
     .pricing-grid-apple,
     .portfolio-grid-apple,
-    .footer-top-apple {
+    .footer-top-apple,
+    .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
+    /* Typography Reductions */
     .hero-title-apple {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle-apple {
+        font-size: 1.1rem;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    /* Reduce Huge Section Headers */
+    .section-header-apple h2 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .section-header-apple p {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .video-text-area h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
-    .hero-btn-apple {
+    /* Section Spacing - Breathe but not too much */
+    .video-showcase,
+    .services-apple,
+    .pricing-apple,
+    .portfolio-apple,
+    .testimonials-apple,
+    .footer-apple {
+        padding: 4rem 0;
+    }
+
+    .hero-btns-apple {
         flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .btn-apple-primary,
+    .btn-apple-secondary {
+        width: 100%;
+        justify-content: center;
     }
 
     .container {
         padding: 0 1.5rem;
+    }
+
+    /* Adjust specific cards for mobile */
+    .service-apple-item {
+        padding: 2rem;
+    }
+
+    .pricing-apple-card {
+        padding: 2rem;
+    }
+
+    .portfolio-hero-item {
+        height: 400px;
+        /* Smaller cover on mobile */
     }
 }
