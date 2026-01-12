@@ -76,43 +76,50 @@ const App = () => {
             name: "Lavagem Externa",
             price: "60,00",
             features: ["Pré-lavagem X-trememol", "Shampoo V-Flock", "Cera Blend", "Pneu Darker"],
-            highlight: false
+            highlight: false,
+            icon: <Car size={32} />
         },
         {
             name: "Limpeza Interna",
             price: "25,00",
             features: ["Aspiração Completa", "Limpeza de Painel", "Limpeza de Vidros", "Sintra Bactericida"],
-            highlight: false
+            highlight: false,
+            icon: <Car size={32} />
         },
         {
             name: "Higienização Interna",
             price: "40,00",
             features: ["Aspiração Profunda", "Renovador Intense", "Eliminação de Odores", "Sintra Bactericida"],
-            highlight: false
+            highlight: false,
+            icon: <Car size={32} />
         },
         {
             name: "Lavagem Completa",
             price: "80,00",
             features: ["Lavagem Externa", "Limpeza Interna", "Aspiração", "Pretinho nos Pneus"],
-            highlight: true
+            highlight: true,
+            icon: <Car size={32} />
         },
         {
             name: "Lavagem Detalhada",
             price: "120,00",
             features: ["Higienização Interna", "Lavagem Externa", "Removedor Chuva Ácida", "Revitalização Rejuvex"],
-            highlight: false
+            highlight: false,
+            icon: <Car size={32} />
         },
         {
             name: "Moto Simples",
             price: "40,00",
             features: ["Lavagem Técnica", "Desengraxante H-7", "Secagem", "Brilho em Plásticos"],
-            highlight: false
+            highlight: false,
+            icon: <Bike size={32} />
         },
         {
             name: "Moto Detalhada",
             price: "85,00",
             features: ["Lavagem Completa", "Desengraxante H-7", "Cera Blend", "Revitalização Total"],
-            highlight: false
+            highlight: false,
+            icon: <Bike size={32} />
         }
     ];
 
@@ -482,6 +489,9 @@ const App = () => {
                         {pricing.map((plan, index) => (
                             <div key={index} className={`pricing-apple-card ${plan.highlight ? 'highlight' : ''}`}>
                                 {plan.highlight && <div className="apple-badge">Recomendado</div>}
+                                <div className="price-icon" style={{ color: 'var(--primary)', marginBottom: '1rem' }}>
+                                    {plan.icon}
+                                </div>
                                 <h3>{plan.name}</h3>
                                 <div className="price-apple">
                                     <span className="currency">R$</span>
