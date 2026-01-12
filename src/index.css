@@ -147,7 +147,8 @@ h3 {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #ffffff;
+    color: var(--primary);
+    /* Gold Icon */
     padding: 0.5rem;
     position: relative;
     z-index: 1002;
@@ -1207,6 +1208,15 @@ h3 {
         font-size: 1.5rem;
         color: #fff;
         font-weight: 600;
+    }
+
+    .mobile-menu .btn-apple {
+        background: var(--primary);
+        color: var(--bg-black);
+        padding: 1rem 2rem;
+        width: 80%;
+        text-align: center;
+        margin-top: 1rem;
     }
 
     /* Grid Resets */
