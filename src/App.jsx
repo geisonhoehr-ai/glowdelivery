@@ -401,178 +401,177 @@ const App = () => {
                         ))}
                     </div>
                 </div>
-        </div>
-            </section >
+            </section>
 
-    {/* Products Showcase */ }
-    < section className = "products-apple" >
-        <div className="container">
-            <div className="section-header-apple">
-                <h2>Produtos de Alta Performance</h2>
-                <p>A química perfeita para o seu veículo.</p>
-            </div>
-            <div className="products-grid">
-                {products.map((prod, idx) => (
-                    <div key={idx} className="product-card">
-                        <h3>{prod.name}</h3>
-                        <span>{prod.role}</span>
-                        <p>{prod.desc}</p>
+            {/* Products Showcase */}
+            < section className="products-apple" >
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>Produtos de Alta Performance</h2>
+                        <p>A química perfeita para o seu veículo.</p>
                     </div>
-                ))}
-            </div>
-        </div>
+                    <div className="products-grid">
+                        {products.map((prod, idx) => (
+                            <div key={idx} className="product-card">
+                                <h3>{prod.name}</h3>
+                                <span>{prod.role}</span>
+                                <p>{prod.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section >
 
-    {/* Moto Detailing Section */ }
-    < section className = "moto-section-apple" >
-        <div className="container">
-            <div className="section-header-apple">
-                <h2>Especialização em Motos</h2>
-                <p>Detalhes que transformam. Antes e Depois.</p>
-            </div>
+            {/* Moto Detailing Section */}
+            < section className="moto-section-apple" >
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>Especialização em Motos</h2>
+                        <p>Detalhes que transformam. Antes e Depois.</p>
+                    </div>
 
-            <div className="moto-grid">
-                <div className="moto-card">
-                    <span className="moto-label before">Antes</span>
-                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49.jpeg" alt="Moto Antes" />
-                </div>
-                <div className="moto-card">
-                    <span className="moto-label after">Depois</span>
-                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (1).jpeg" alt="Moto Depois" />
-                </div>
-
-                <div className="moto-card">
-                    <span className="moto-label before">Antes</span>
-                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (2).jpeg" alt="Moto Antes" />
-                </div>
-                <div className="moto-card">
-                    <span className="moto-label after">Depois</span>
-                    <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (3).jpeg" alt="Moto Depois" />
-                </div>
-            </div>
-        </div>
-            </section >
-
-    {/* Pricing Section */ }
-    < section id = "precos" className = "pricing-apple" >
-        <div className="container">
-            <div className="section-header-apple">
-                <h2>Investimento</h2>
-                <p>Transparência e valor em cada serviço.</p>
-            </div>
-
-            <div className="pricing-grid-apple">
-                {pricing.map((plan, index) => (
-                    <div key={index} className={`pricing-apple-card ${plan.highlight ? 'highlight' : ''}`}>
-                        {plan.highlight && <div className="apple-badge">Recomendado</div>}
-                        <h3>{plan.name}</h3>
-                        <div className="price-apple">
-                            <span className="currency">R$</span>
-                            <span className="amount">{plan.price}</span>
+                    <div className="moto-grid">
+                        <div className="moto-card">
+                            <span className="moto-label before">Antes</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49.jpeg" alt="Moto Antes" />
                         </div>
-                        <ul className="price-features-apple">
-                            {plan.features.map((feature, fIndex) => (
-                                <li key={fIndex}>
-                                    <CheckCircle2 size={16} className="text-primary" />
-                                    {feature}
-                                </li>
-                            ))}
-                        </ul>
-                        <a href={whatsappLink} className={`btn-apple-${plan.highlight ? 'primary' : 'secondary'} w-full`}>
-                            Escolher {plan.name}
-                        </a>
-                    </div>
-                ))}
-            </div>
-        </div>
-            </section >
+                        <div className="moto-card">
+                            <span className="moto-label after">Depois</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (1).jpeg" alt="Moto Depois" />
+                        </div>
 
-    {/* Gallery Cover - Single Image */ }
-    < section id = "portfolio" className = "portfolio-apple" >
-        <div className="container">
-            <div className="section-header-apple">
-                <h2>Galeria de Projetos</h2>
-                <p>O que a Glow Delivery entrega todos os dias.</p>
-            </div>
-
-            <motion.div
-                whileHover={{ scale: 1.01 }}
-                className="portfolio-hero-item"
-                onClick={openGallery}
-            >
-                <img src={coverImage} alt="Cover Car" />
-                <div className="portfolio-overlay">
-                    <div className="overlay-content">
-                        <Maximize2 size={48} />
-                        <h3>Ver Galeria Completa</h3>
-                    </div>
-                </div>
-            </motion.div>
-        </div>
-            </section >
-
-    {/* Testimonials */ }
-    < section className = "testimonials-apple" >
-        <div className="container">
-            <div className="section-header-apple">
-                <h2>O que dizem</h2>
-                <p>Histórias de quem já brilha com a Glow.</p>
-            </div>
-            <div className="testimonials-grid">
-                {testimonials.map((t, index) => (
-                    <div key={index} className="testimonial-card">
-                        <Quote size={32} />
-                        <p>"{t.text}"</p>
-                        <div className="testimonial-author">
-                            <h4>{t.name}</h4>
-                            <span>{t.car}</span>
+                        <div className="moto-card">
+                            <span className="moto-label before">Antes</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (2).jpeg" alt="Moto Antes" />
+                        </div>
+                        <div className="moto-card">
+                            <span className="moto-label after">Depois</span>
+                            <img src="/WhatsApp Image 2026-01-12 at 20.32.49 (3).jpeg" alt="Moto Depois" />
                         </div>
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
             </section >
 
-    {/* Footer */ }
-    < footer className = "footer-apple" >
-        <div className="container">
-            <div className="footer-top-apple">
-                <div className="footer-brand-apple">
-                    <span className="logo-text">GLOW <span className="text-primary">DELIVERY</span></span>
-                    <p>A excelência em estética automotiva que vai até você.</p>
-                    <div className="social-apple">
-                        <a href="https://instagram.com/glowdelivery_lavagem"><Instagram size={20} /></a>
-                        <a href={whatsappLink}><Phone size={20} /></a>
+            {/* Pricing Section */}
+            < section id="precos" className="pricing-apple" >
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>Investimento</h2>
+                        <p>Transparência e valor em cada serviço.</p>
+                    </div>
+
+                    <div className="pricing-grid-apple">
+                        {pricing.map((plan, index) => (
+                            <div key={index} className={`pricing-apple-card ${plan.highlight ? 'highlight' : ''}`}>
+                                {plan.highlight && <div className="apple-badge">Recomendado</div>}
+                                <h3>{plan.name}</h3>
+                                <div className="price-apple">
+                                    <span className="currency">R$</span>
+                                    <span className="amount">{plan.price}</span>
+                                </div>
+                                <ul className="price-features-apple">
+                                    {plan.features.map((feature, fIndex) => (
+                                        <li key={fIndex}>
+                                            <CheckCircle2 size={16} className="text-primary" />
+                                            {feature}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <a href={whatsappLink} className={`btn-apple-${plan.highlight ? 'primary' : 'secondary'} w-full`}>
+                                    Escolher {plan.name}
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className="footer-links-apple">
-                    <h4>Navegação</h4>
-                    <a href="#inicio">Início</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#precos">Preços</a>
-                    <a href="#portfolio">Galeria</a>
+            </section >
+
+            {/* Gallery Cover - Single Image */}
+            < section id="portfolio" className="portfolio-apple" >
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>Galeria de Projetos</h2>
+                        <p>O que a Glow Delivery entrega todos os dias.</p>
+                    </div>
+
+                    <motion.div
+                        whileHover={{ scale: 1.01 }}
+                        className="portfolio-hero-item"
+                        onClick={openGallery}
+                    >
+                        <img src={coverImage} alt="Cover Car" />
+                        <div className="portfolio-overlay">
+                            <div className="overlay-content">
+                                <Maximize2 size={48} />
+                                <h3>Ver Galeria Completa</h3>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
-                <div className="footer-contact-apple">
-                    <h4>Contato</h4>
-                    <p>Santa Maria, RS</p>
-                    <p>(55) 99912-2536</p>
-                    <p>@glowdelivery_lavagem</p>
+            </section >
+
+            {/* Testimonials */}
+            < section className="testimonials-apple" >
+                <div className="container">
+                    <div className="section-header-apple">
+                        <h2>O que dizem</h2>
+                        <p>Histórias de quem já brilha com a Glow.</p>
+                    </div>
+                    <div className="testimonials-grid">
+                        {testimonials.map((t, index) => (
+                            <div key={index} className="testimonial-card">
+                                <Quote size={32} />
+                                <p>"{t.text}"</p>
+                                <div className="testimonial-author">
+                                    <h4>{t.name}</h4>
+                                    <span>{t.car}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div className="footer-bottom-apple">
-                <p>© 2024 Glow Delivery. Design inspirado em excelência.</p>
-            </div>
-        </div>
+            </section >
+
+            {/* Footer */}
+            < footer className="footer-apple" >
+                <div className="container">
+                    <div className="footer-top-apple">
+                        <div className="footer-brand-apple">
+                            <span className="logo-text">GLOW <span className="text-primary">DELIVERY</span></span>
+                            <p>A excelência em estética automotiva que vai até você.</p>
+                            <div className="social-apple">
+                                <a href="https://instagram.com/glowdelivery_lavagem"><Instagram size={20} /></a>
+                                <a href={whatsappLink}><Phone size={20} /></a>
+                            </div>
+                        </div>
+                        <div className="footer-links-apple">
+                            <h4>Navegação</h4>
+                            <a href="#inicio">Início</a>
+                            <a href="#servicos">Serviços</a>
+                            <a href="#precos">Preços</a>
+                            <a href="#portfolio">Galeria</a>
+                        </div>
+                        <div className="footer-contact-apple">
+                            <h4>Contato</h4>
+                            <p>Santa Maria, RS</p>
+                            <p>(55) 99912-2536</p>
+                            <p>@glowdelivery_lavagem</p>
+                        </div>
+                    </div>
+                    <div className="footer-bottom-apple">
+                        <p>© 2024 Glow Delivery. Design inspirado em excelência.</p>
+                    </div>
+                </div>
             </footer >
 
-    {/* Floating WhatsApp Apple Style */ }
-    < motion.a
-href = { whatsappLink }
-className = "whatsapp-apple"
-whileHover = {{ scale: 1.1 }}
-whileTap = {{ scale: 0.9 }}
+            {/* Floating WhatsApp Apple Style */}
+            < motion.a
+                href={whatsappLink}
+                className="whatsapp-apple"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
             >
-    <Phone size={24} fill="white" />
+                <Phone size={24} fill="white" />
             </motion.a >
         </div >
     );
