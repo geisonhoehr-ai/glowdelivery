@@ -465,14 +465,7 @@ const App = () => {
                             <img src="/WhatsApp Image 2026-01-12 at 20.32.50 (1).jpeg" alt="Carro Depois" />
                         </div>
 
-                        <div className="moto-card">
-                            <span className="moto-label before">Antes</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.50 (2).jpeg" alt="Carro Antes" />
-                        </div>
-                        <div className="moto-card">
-                            <span className="moto-label after">Depois</span>
-                            <img src="/WhatsApp Image 2026-01-12 at 20.32.50 (3).jpeg" alt="Carro Depois" />
-                        </div>
+
                     </div>
                 </div>
             </section >
