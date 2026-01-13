@@ -1166,6 +1166,54 @@ h3 {
     margin: 0 auto;
 }
 
+/* Products Section */
+.products-apple {
+    padding: 8rem 0;
+    background: #000;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #111;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    background: #161616;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.product-card h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card span {
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.product-card p {
+    color: #888;
+    line-height: 1.6;
+}
+
 /* Moto Section */
 .moto-section-apple {
     padding: 8rem 0;
