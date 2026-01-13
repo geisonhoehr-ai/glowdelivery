@@ -767,6 +767,7 @@ h3 {
 .pricing-apple-card:hover {
     transform: translateY(-15px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary);
 }
 
 .pricing-apple-card.highlight {
