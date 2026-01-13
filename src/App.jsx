@@ -514,21 +514,7 @@ const App = () => {
                 </div>
             </section >
 
-            {/* Gallery Cover - Single Image */}
-            < section id="portfolio" className="portfolio-apple" >
-                <div className="container">
-                    <div className="section-header-apple">
-                        <h2>Galeria de Projetos</h2>
-                        <p>O que a Glow Delivery entrega todos os dias.</p>
-                    </div>
 
-                    <div className="portfolio-action" style={{ textAlign: 'center', marginTop: '2rem' }}>
-                        <button onClick={openGallery} className="btn-apple-secondary">
-                            <Maximize2 size={24} /> Ver Galeria Completa
-                        </button>
-                    </div>
-                </div>
-            </section >
 
             {/* Testimonials */}
             < section className="testimonials-apple" >
