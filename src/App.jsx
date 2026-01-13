@@ -588,7 +588,7 @@ const App = () => {
                         </div>
                     </div>
                     <div className="footer-bottom-apple">
-                        <p>© 2024 Glow Delivery. Design inspirado em excelência.</p>
+                        <p>© 2026 Glow Delivery. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </footer >
