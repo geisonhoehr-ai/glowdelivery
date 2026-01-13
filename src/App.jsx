@@ -30,13 +30,32 @@ const App = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isGalleryOpen, setIsGalleryOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
+    const [showCookieConsent, setShowCookieConsent] = useState(false);
     const videoRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        // Check local storage for cookies
+        const startTimeout = setTimeout(() => {
+            const consent = localStorage.getItem('glowDeliveryCookieConsent');
+            if (!consent) {
+                setShowCookieConsent(true);
+            }
+        }, 2000);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(startTimeout);
+        }
     }, []);
+
+    const acceptCookies = () => {
+        localStorage.setItem('glowDeliveryCookieConsent', 'true');
+        setShowCookieConsent(false);
+    };
+
 
     const services = [
         {
@@ -602,6 +621,29 @@ const App = () => {
             >
                 <Phone size={24} fill="white" />
             </motion.a >
+
+
+            {/* Cookie Consent Banner */}
+            <AnimatePresence>
+                {showCookieConsent && (
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
+                        className="cookie-consent"
+                    >
+                        <div className="cookie-content">
+                            <p>
+                                Utilizamos cookies para oferecer a melhor experiência, assim como cuidamos do seu carro.
+                                Ao continuar, você concorda com nossa política.
+                            </p>
+                            <button onClick={acceptCookies} className="btn-cookie">
+                                Aceitar
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div >
     );
 };

@@ -1431,3 +1431,70 @@ h3 {
         /* Smaller cover on mobile */
     }
 }
+
+/* Cookie Consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(18, 18, 18, 0.85);
+    /* Dark Glass */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    z-index: 10000;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cookie-content p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.btn-cookie {
+    background: var(--primary);
+    color: var(--bg-black);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition-apple);
+}
+
+.btn-cookie:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .cookie-consent {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 20px 20px 0 0;
+        border-bottom: none;
+    }
+}
