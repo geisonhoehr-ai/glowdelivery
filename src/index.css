@@ -392,15 +392,26 @@ h3 {
 
 /* Feature Cards Hover */
 /* Feature Cards Hover */
+/* Feature Cards Hover */
 .apple-card {
     background: var(--primary);
-    padding: 4rem 3rem;
-    border-radius: 30px;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    /* Diagonal cut alternative: use clip-path if desired, but user said 'can cut', let's use a subtle bevel or just sharper corners with current request */
+    /* Let's try to mimic the diagonal cut request while keeping it clean, or just sharper radius as 'rectangular'. 
+       User said 'retangular e menor', optionally 'cortar as pontas na diagonal'.
+       We will use clip-path to cut the corners for that 'different' look.
+    */
+    clip-path: polygon(20px 0, 100% 0,
+            100% calc(100% - 20px), calc(100% - 20px) 100%,
+            0 100%, 0 20px);
     text-align: center;
     transition: var(--transition-apple);
-    border: 1px solid var(--primary);
+    border: none;
+    /* Border interferes with clip-path sometimes unless wrapped */
     position: relative;
     overflow: hidden;
+    /* Reduce size perception also by max-width if needed but padding reduction helps */
 }
 
 .apple-card h3 {
