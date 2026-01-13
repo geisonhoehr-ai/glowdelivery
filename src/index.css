@@ -670,20 +670,37 @@ h3 {
 }
 
 /* Pricing Apple - White Section for Contrast */
+/* Pricing Apple - Dark Section with Image Background */
 .pricing-apple {
-    background: #ffffff;
+    background-image: url('/polishing_car.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
     padding: 8rem 0;
-    /* Standardized spacing */
-    color: var(--bg-black);
+    color: #fff;
 }
 
-/* Override header text color for white background */
+.pricing-apple::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 0;
+}
+
+.pricing-apple .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Override header text color for dark background */
 .pricing-apple .section-header-apple h2 {
-    color: var(--bg-black);
+    color: #fff;
 }
 
 .pricing-apple .section-header-apple p {
-    color: #666;
+    color: #ccc;
 }
 
 .pricing-header-apple h2 {

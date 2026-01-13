@@ -522,19 +522,11 @@ const App = () => {
                         <p>O que a Glow Delivery entrega todos os dias.</p>
                     </div>
 
-                    <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        className="portfolio-hero-item"
-                        onClick={openGallery}
-                    >
-                        <img src={coverImage} alt="Cover Car" />
-                        <div className="portfolio-overlay">
-                            <div className="overlay-content">
-                                <Maximize2 size={48} />
-                                <h3>Ver Galeria Completa</h3>
-                            </div>
-                        </div>
-                    </motion.div>
+                    <div className="portfolio-action" style={{ textAlign: 'center', marginTop: '2rem' }}>
+                        <button onClick={openGallery} className="btn-apple-secondary">
+                            <Maximize2 size={24} /> Ver Galeria Completa
+                        </button>
+                    </div>
                 </div>
             </section >
 
