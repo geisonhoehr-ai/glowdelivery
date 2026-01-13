@@ -240,6 +240,22 @@ h3 {
     color: var(--text-muted);
 }
 
+.hero-title-apple .gold-highlight {
+    color: var(--primary);
+    text-shadow: 0 0 20px rgba(234, 179, 8, 0.5);
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
+    }
+
+    to {
+        text-shadow: 0 0 30px rgba(234, 179, 8, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
 .hero-subtitle-apple {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.8);

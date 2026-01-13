@@ -302,7 +302,7 @@ const App = () => {
                         </motion.span>
                         <h1 className="hero-title-apple">
                             O brilho extraordinário <br />
-                            <span>na sua porta.</span>
+                            <span className="gold-highlight">na sua porta.</span>
                         </h1>
                         <p className="hero-subtitle-apple">
                             Lavagem premium a domicílio em Santa Maria. <br />
